@@ -31,7 +31,8 @@ export default function TaskItem({ item }: Props) {
           <SwipeToDelete translation={translation} />
         )}
         rightThreshold={width / 3}
-        onSwipeableWillOpen={onRemove}
+        onSwipeableOpen={onRemove}
+        animationOptions={{ duration: 300 }}
       >
         <Checkbox.Android
           status={isCompleted ? "checked" : "unchecked"}
